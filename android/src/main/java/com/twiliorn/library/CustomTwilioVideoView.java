@@ -505,7 +505,7 @@ public class CustomTwilioVideoView extends View implements LifecycleEventListene
         public void onReceive(Context context, Intent intent) {
 //            audioManager.setSpeakerphoneOn(true);
             if (Intent.ACTION_HEADSET_PLUG.equals(intent.getAction())) {
-                audioManager.setSpeakerphoneOn(!audioManager.isWiredHeadsetOn() && || !audioManager.isBluetoothScoOn());
+                audioManager.setSpeakerphoneOn(!audioManager.isWiredHeadsetOn() && !audioManager.isBluetoothScoOn());
             }
         }
     }
